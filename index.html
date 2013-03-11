@@ -82,6 +82,8 @@
 				<section>
 					<section>
 						<h2>1.1 Variablen</h2>
+					</section>
+					<section>
 						<p>Was ist eine Variable?</p>
 						<small>
 						<ul>
@@ -207,13 +209,167 @@ personenImZugwagon[3] = 3;
 						<small>Beispiel</small>
 						<pre><code>
 System.out.print(“Im 2. Wagon befinden sich: “
-+ personenImZugwagon[1] + “ Personen“);
+	+ personenImZugwagon[1] + “ Personen“);
 						</pre></code>
 						<small>Ausgabe</small>
 
 					</section>
 				</section>
 
+				<section>
+					<section>
+						<h2>1.2 Kontrollstrukturen</h2>
+					</section>
+					<section>
+						<p>Verzweigung</p>
+						<pre><code>
+if(Bedingung){
+	TrueBlock;
+}else{ /* “else{...}“ ist optional */
+	FalseBlock;
+}
+						</pre></code>
+						<small>if-else Verzweigung allgemein</small>
+						<pre><code>
+int zahl = Integer.parseInt(args[0]); //Parst von String zu Int
+if ((zahl % 2) == 0){
+	System.out.println(“Zahl ist gerade!“);
+}else{
+	System.out.println(“Zahl ist ungerade!“);
+}
+						</pre></code>
+						<small>Beispiel</small>
+					</section>
+					<section>
+						<p>switch-case Verzweigung</p>
+						<pre><code>
+switch (integer_variable){
+	case nummer: //Sequenz
+	break; //break optional
+	default: //Default Sequenz
+	break; //break optional
+}
+						</pre></code>
+						<small>switch-case Verzweigung allgemein</small>
+						<pre><code>
+int note = Integer.parseInt(args[0]);
+switch ( note ) {
+	case 1: System.out.println(“ sehr gut “); break ;
+	case 2: System.out.println(“ gut ”); break ;
+	case 3: System.out.println(“ befriedigend “); break ;
+	case 4: System.out.println(“ ausreichend “); break ;
+	default : System.out.println(“ nicht Bestanden“); break ;
+}
+						</pre></code>
+						<small>Beispiel</small>
+					</section>
+					<section data-state="alert">
+						<h2>Aufgabe 3</h2>
+						<p>Werten Sie eine Zahl note unter Verwendung von if-else
+						Verzweigungen aus. Dabei soll eins sehr gut, zwei gut,
+						drei befriedigend, vier ausreichend sein bei und allen anderen Zahlen
+						nicht Bestanden ausgegeben werden. Verschachteln Sie ihre
+						Verzweigung derart, dass nach der Ausgabe nicht weiter
+						Geprüft wird.
+						</p>
+					</section>
+					<section>
+						<p>Schleifen</p>
+						<small>
+						<ul>
+							<li>Zur Wiederholung von Anweisungen</li>
+							<li>Drei Schleifenarten</li>
+							<ul>
+								<li>while: Kopfgesteuert</li>
+								<li>do-while: Fußgesteuert</li>
+								<li>for: Zählschleife</li>
+							</ul>
+							<li>Schleifendurchlauf solange, bis Bedingung erfüllt ist oder &#8734;</li>
+							<li>Rekursion ist der Schleife sehr ähnliches, oft äquivalentes Konzept</li>
+						</ul>
+						</small>
+					</section>
+					<section>
+						<p>Schleifen</p>
+						<pre><code>
+int i = 1, summe=0;
+while(i<11){
+	summe=summe+i;
+	i++;
+}
+System.out.println(“Summe von 1 bis 10 ist “ + summe);
+						</pre></code>
+						<small>while-Schleife</small>
+						<pre><code>
+int i = 1, summe=0;
+do{
+	summe=summe+i;
+	i++;
+} while(i<11);
+System.out.println(“Summe von 1 bis 10 ist “ + summe);
+						</pre></code>
+						<small>do-while Schleife</small>
+						<pre><code>
+int summe=0;
+for(int i =1;i<11;i++){
+	summe=summe+i;
+}
+System.out.println(“Summe von 1 bis 10 ist “ + summe);
+						</pre></code>
+						<small>for Schleife</small>
+					</section>
+					<section data-state="alert">
+						<h2>Aufgabe 4</h2>
+						<p>Schreiben Sie eine Programm welches über die
+						Kommandozeile eine natürlich Zahl n einließt, die Summe
+						von 1 bis n Berechnet und Ausgibt. Verwenden Sie dazu eine Schleife.
+
+						</p>
+					</section>
+				</section>
+				<section>
+					<section data-state="alert">
+						<h2>Übungskomplex 1</h2>
+						<h4>Übung 1</h4>
+						<p>Schreiben Sie ein Programm, welches die Fakultät einer
+						Ganzzahl (mit 0 beginnend) berechnet und Ausgibt. Beispielausgabe: 3! = 6
+						</p>
+	
+						<h4><br/>Übung 2</h4>
+						<p>Schreiben Sie ein Programm, welches alle natürlichen Teiler
+						einer natürlichen Zahl berechnet und Ausgibt. Beispielausgabe: 10 = {1,2,5,10}
+						</p>
+	
+						<h4><br/>Übung 3</h4>
+						<p>Schreiben Sie ein Programm, welches über die Komandozeile
+						eine Zahlenreihe erhält. Geben Sie die kleinste und größte
+						Zahl dieser Reihe aus. Beispieleingabe: 1 4 19 -1 0 1 -15 7 2 12
+						Beispielausgabe: min = -15 max =19
+						</p>
+					</section>
+					<section data-state="alert">
+						<h4>Übung 4</h4>
+						<p>Schreiben Sie ein Programm, welches über die Komandozeile
+						eine Zahlenreihe erhält. Sortieren Sie die Reihe der größe
+						nach, angefangen mit dem kleinsten Wert.
+						Beispieleingabe: 1 4 19 -1 0 1 -15 7 2 12
+						Beispielausgabe -15 -1 0 1 1 2 4 12 19
+						</p>
+	
+						<h4><br/>Übung 5</h4>
+						<p>Glücksspiel. Schreiben Sie ein Programm, welches über die
+						Kommandozeile 2 Namen und 2 Zahlen zwischen 1 und 100
+						entgegen nimmt. Erzeugen Sie über den Ausdruck
+						“Math.random()*10+1;“ eine Zahl zwischen 1 und 100.
+						Vergleichen Sie die Zufallszahl mit den über die
+						Kommandozeile gegebenen Werten. Der Spieler, welcher am
+						nächsten an der Zufallszahl liegt hat gewonnen. Bei
+						unentschieden wird erneut gespielt.
+						Beispielausgabe: Müller 23 Hans 73
+						Zufallszahl 43 -> Müller gewinnt!
+						</p>
+					</section>
+				</section>
 				<section>
 					<h2>Allgemeine Informationen</h2>
 					<p>
