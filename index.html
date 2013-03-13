@@ -180,13 +180,13 @@ String vollerName = “Stefan“ + “Walesch“;
 					</section>
 					<section data-state="alert">
 						<h2>Aufgabe 1</h2>
-						<p>Programmieren sie zum Kennenlernen der Vorgestellten
+						<p>Programmieren Sie zum Kennenlernen der Vorgestellten
 						Konzepte ein Hello- World Programm.
 						</p>
 					</section>
 					<section data-state="alert">
 						<h2>Aufgabe 2</h2>
-						<p>Erweitern sie Ihr Hallo-World Programm zur Realisierung der
+						<p>Erweitern Sie Ihr Hallo-World Programm zur Realisierung der
 						Geschwindigkeitsberechnung.
 						Definieren Sie dazu eine Strecke s=5, eine Zeit t=2 und eine
 						Geschwindigkeit v=s/t. Verwenden Sie geeignete Datentypen.
@@ -265,7 +265,7 @@ switch ( note ) {
 					</section>
 					<section data-state="alert">
 						<h2>Aufgabe 3</h2>
-						<p>Werten sie eine Zahl note unter Verwendung von if-else
+						<p>Werten Sie eine Zahl note unter Verwendung von if-else
 						Verzweigungen aus. Dabei soll eins sehr gut, zwei gut,
 						drei befriedigend, vier ausreichend sein bei und allen anderen Zahlen
 						nicht Bestanden ausgegeben werden. Verschachteln Sie ihre
@@ -320,12 +320,15 @@ System.out.println(“Summe von 1 bis 10 ist “ + summe);
 					</section>
 					<section data-state="alert">
 						<h2>Aufgabe 4</h2>
-						<p>Schreiben sie eine Programm, welches über die
+						<p>Schreiben Sie eine Programm, welches über die
 						Kommandozeile eine natürlich Zahl n einließt, die Summe
 						von 1 bis n Berechnet und Ausgibt. Verwenden Sie dazu eine Schleife.
 
 						</p>
 					</section>
+				</section>
+				<section>
+					<img src="images/problemtroll.jpg" alt="Fragen oder Probleme?" width="120%" height="120%"></p>
 				</section>
 				<section>
 					<section data-state="alert">
@@ -368,6 +371,71 @@ System.out.println(“Summe von 1 bis 10 ist “ + summe);
 						Beispielausgabe: Müller 23 Hans 73
 						Zufallszahl 43 -> Müller gewinnt!
 						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+					<h4>Funktionen</h4>
+					</section>
+					<section>
+						<p>Was ist eine Funktion?</p>
+						<small>
+							<ul>
+								<li>zur Einsparung von doppeltem Quelltext</li>
+								<li>beliebig viele (auch 0) Eingabewerte (Parameter)</li>
+								<li>kein oder ein Rückgabewert</li>
+								<li>ähnlich zu mathematischen Funktionen (z.B. f(x) = m * x + n)</li>
+							</ul><br/>
+
+						<br/><p>Beachte: In Java ist oft die Rede von Methoden. Funktionen sind Methoden. 
+						Methoden jedoch nicht unbedingt Funktionen.</p>
+						</small>
+					</section>
+					<section>
+						<p>Funktionen: Aufbau</p>
+						<small>
+							<ul>
+								<li>Funktion muss vor der Nutzung bekannt sein</li>
+								<li>neben Parametern ist die Nutzung lokaler oder globaler Variablen möglich</li>
+								<li>jeder Parameter hat einen Wert</li>
+								<li>Rückgabe hat einen bestimmten Wert oder keinen Wert (void)</li>
+								<li>bestimmte Schlüsselwörter (Modifier) geben Information über Zugreifbarkeit auf Variablen, Funktionen, Methoden, Objekte
+								<li>Schlüsselwort <b>static</b> definiert in Java eine Funktion
+								<ul><li> Es besagt, dass eine Fktn. oder Variable unabhängig von einem Objekt existieren kann
+								<li> Es gibt noch weitere Schlüsselwörter.</li><br/> 
+							</ul></ul><br/>
+						</small>
+						<pre><code>
+modifier static rückgabetyp funktionsname( typ_1 parameter_1, ..., typ_n parameter_n) {
+	/* Funktionsrumpf */
+}
+						</pre></code>
+					</section>
+					<section>
+						<p>Funktionen: Beispiel</p>
+						<pre><code>
+public static void pointlessCalculation( float x ) {
+	float m = 0.5;
+	float n = 2.1;
+	/* m und n sind lokale Variablen, x ist Parameter.
+	 * Zu beachten ist die Verwendung von "." statt 
+	 * "," bei der Deklaration
+	 */
+	return m*x+n;
+}
+						</pre></code>
+					</section>
+					<section>
+						<p>Hello, again!</p>
+						<pre><code>
+public static void helloWorld() {
+	System.out.println(“Hello World!”);
+}
+
+public static String helloWorld(String helloWorld) { 
+	return helloWorld;
+}
+						</pre></code>
 					</section>
 				</section>
 				<section>
