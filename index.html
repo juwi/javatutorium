@@ -437,6 +437,67 @@ public static String helloWorld(String helloWorld) {
 }
 						</pre></code>
 					</section>
+					<section>
+						<p>Überladene Funktionen</p>
+						<small>
+						<ul>
+							<li>Mehrere Funktionen mit gleichem Namen in einer Klasse</li>
+							<li>Problemlos möglich, wenn verschiedene Parameter übergeben werden</li>
+							<li>Bestimmung der konkreten Funktion durch Parameter</li>
+						</ul>
+						</small>
+					</section>
+					<section>
+						<p>Funktionsaufrufe mit- und ohne Rückgabe</p>
+						<pre><code>
+funktionsname ( parameter_1 ,... , parameter_n );
+						</pre></code>
+						<small><p>Funktionsaufruf ohne Rückgabe</p></small>
+						<pre><code>
+variablenname = funktionsname ( parameter_1
+			,... , parameter_n );
+						</pre></code>
+						<small><p>Funktionsaufruf mit Rückgabe</p></small>
+					</section>
+					<section>
+						<p>Rekursion</p>
+						<small>
+						<ul>
+							<li>Selbstaufruf von Funktionen, Methoden, Klassen oder Objekten</li>
+							<li>Das heißt eine Definition durch sich selbst</li>
+
+						</ul>
+						</small>
+						<pre><code>
+public static int faculty( int x) {
+	if (x==0) return 1;
+	return x*faculty(x-1);
+}
+alternativ:
+public static int faculty(int x) {
+	return (x==0)?1:x*faculty(x-1);
+}	
+						</pre></code>
+
+					</section>
+					<section data-state="alert">
+						<h4>Aufgabe 1</h4>
+						<p>Erweitern Sie das gegebene Hello World Programm zu einem lauffähigen 
+						Programm mit mehreren überladenen Funktionen. Als Eingabe soll das 
+						Programm bis zu 3 Strings verarbeiten können. Diese sollen unter Verwenung von substring() Wort- und Buchstabenweise invertiert und dann 
+						ausgegeben werden.</p>
+						<small><p><br/>Hilfsmittel aus der Javadoc:
+						<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html"/>
+						http://docs.oracle.com/javase/6/docs/api/java/lang/String.html</a></p></small>
+					</section>
+					<section data-state="alert">
+						<h4>Aufgabe 2</h4>
+						<p>Die Fibonacci-Folge hat folgende Form:</p>
+						<p>1, 1, 2, 3, 5, 8, 13, 21,... </p><p>Ein Folgeglied berechnet sich also, indem man seine beiden Vorgänger addiert. 
+						Implementieren Sie die Fibonacci-Folge nun rekursiv mit Hilfe von Funktionen.
+						Dabei soll es möglich sein, das zu berechnende Folgeglied als Startparameter beim Programmaufruf zu bestimmen.
+						Als Ergebnis ist nur der Wert des berechneten Gliedes anzugeben.</p>
+					</section>
 				</section>
 				<section>
 					<h2>Allgemeine Informationen</h2>
